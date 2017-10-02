@@ -2,3 +2,6 @@ Library/
 Temp/
 Assets/StreamingAssets/WrldResources/*
 Assets/StreamingAssets/WrldResources.meta
+Assembly-CSharp-Editor.csproj
+Assembly-CSharp.csproj
+Unity SDK Samples.sln
