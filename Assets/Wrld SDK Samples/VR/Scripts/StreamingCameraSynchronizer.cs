@@ -11,5 +11,6 @@ public class StreamingCameraSynchronizer : MonoBehaviour
     {
         m_streamingCamera.transform.position = transform.position;
         m_streamingCamera.transform.rotation = transform.rotation;
+        m_streamingCamera.fieldOfView = Camera.main.fieldOfView;
     }
 }

@@ -14,19 +14,19 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 8
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 3
+  m_Fog: 1
+  m_FogColor: {r: 0.9490197, g: 1, b: 1, a: 1}
+  m_FogMode: 1
   m_FogDensity: 0.01
-  m_LinearFogStart: 0
-  m_LinearFogEnd: 300
+  m_LinearFogStart: 1300
+  m_LinearFogEnd: 2000
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 01cb13bc5fd6146899d9df876eae2700, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1013124830}
-  m_IndirectSpecularColor: {r: 0.4478625, g: 0.49785656, b: 0.57545733, a: 1}
+  m_IndirectSpecularColor: {r: 0.7295871, g: 0.8348221, b: 0.8602877, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -130,7 +130,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 268801128}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 210, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1926831228}
@@ -164,13 +164,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 282104468}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0.86602545, z: 0, w: 0.49999994}
+  m_LocalPosition: {x: 0, y: 100, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1488915004}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 120, z: 0}
 --- !u!23 &282104470
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -259,7 +259,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 297853956}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 100, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1926831228}
@@ -352,13 +352,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 316522007}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0.8660254, z: -0, w: -0.5}
+  m_LocalPosition: {x: 0, y: 100, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 797316654}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 240, z: 0}
 --- !u!23 &316522009
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -450,12 +450,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_streamingCamera: {fileID: 1149017001}
   m_apiKey: 
-  m_latitudeDegrees: 37.78580093383789
-  m_longitudeDegrees: -122.4010009765625
+  m_latitudeDegrees: 56.45974349975586
+  m_longitudeDegrees: -2.977557897567749
   m_distanceToInterest: 1781
   m_headingDegrees: 0
   m_coordSystem: 0
-  m_streamingLodBasedOnDistance: 0
+  m_streamingLodBasedOnDistance: 1
   m_materialDirectory: WrldMaterials/
   m_overrideLandmarkMaterial: {fileID: 0}
   m_useBuiltInCameraControls: 0
@@ -516,8 +516,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13285e89f13e48149ece267609da9d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitialLatitude: 37.7857560190977
-  InitialLongitude: -122.401099412036
+  InitialLatitude: 56.4596985843887
+  InitialLongitude: -2.97769869744193
   InitialHeadingInDegrees: 0
 --- !u!1 &936198287
 GameObject:
@@ -540,14 +540,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 936198287}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 210, z: 0}
+  m_LocalRotation: {x: 0, y: 0.86317533, z: 0, w: 0.5049043}
+  m_LocalPosition: {x: 0, y: 100, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1658462102}
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 119.35, z: 0}
 --- !u!1 &1013124829
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,7 +579,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -638,7 +638,7 @@ GameObject:
   - component: {fileID: 1149017001}
   m_Layer: 0
   m_Name: Streaming Camera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -660,7 +660,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 20
-  far clip plane: 4000
+  far clip plane: 2000
   field of view: 43
   orthographic: 0
   orthographic size: 5
@@ -733,8 +733,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13285e89f13e48149ece267609da9d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitialLatitude: 37.7857560191418
-  InitialLongitude: -122.400902541197
+  InitialLatitude: 56.4596985843407
+  InitialLongitude: -2.97741709629981
   InitialHeadingInDegrees: 0
 --- !u!1 &1658462101
 GameObject:
@@ -751,7 +751,7 @@ GameObject:
   - component: {fileID: 1658462107}
   m_Layer: 0
   m_Name: Eye Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -807,7 +807,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 2
-  far clip plane: 4000
+  far clip plane: 2000
   field of view: 43
   orthographic: 0
   orthographic size: 5
@@ -879,6 +879,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13285e89f13e48149ece267609da9d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitialLatitude: 37.785890762853
-  InitialLongitude: -122.401000976632
+  InitialLatitude: 56.4598333303895
+  InitialLongitude: -2.97755789678582
   InitialHeadingInDegrees: 0

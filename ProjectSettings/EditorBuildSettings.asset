@@ -4,4 +4,7 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Wrld SDK Samples/VR/Scene/VR Sample Scene.unity
+    guid: 523fa001900e040ae86b261e47a3986a
