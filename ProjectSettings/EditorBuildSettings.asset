@@ -6,5 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Wrld SDK Samples/AR/ARKit/Scene/ARKit Sample Scene.unity
+    guid: 9f6fc25bade274da8a282084d9122b86
+  - enabled: 0
     path: Assets/Wrld SDK Samples/VR/Scene/VR Sample Scene.unity
     guid: 523fa001900e040ae86b261e47a3986a
