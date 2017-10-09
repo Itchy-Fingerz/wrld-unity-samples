@@ -21,7 +21,7 @@ namespace Wrld.Streaming
             var gameObject = new GameObject(objectName);
             gameObject.SetActive(false);
             gameObject.transform.parent = m_parentTransform;
-
+            gameObject.transform.localScale = Vector3.one;
             gameObject.AddComponent<MeshFilter>().sharedMesh = mesh;
             gameObject.AddComponent<MeshRenderer>().sharedMaterial = material;
 

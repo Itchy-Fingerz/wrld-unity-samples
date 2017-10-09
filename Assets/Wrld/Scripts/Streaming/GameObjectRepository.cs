@@ -25,6 +25,8 @@ namespace Wrld.Streaming
         {
             m_root = new GameObject(rootName);
             m_root.transform.parent = parentForStreamedObjects;
+            m_root.transform.localScale = Vector3.one;
+            m_root.transform.localPosition = Vector3.zero;
             m_materialRepository = materialRepository;
         }
 
