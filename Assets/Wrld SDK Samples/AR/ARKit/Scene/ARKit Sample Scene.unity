@@ -538,7 +538,7 @@ MonoBehaviour:
   m_headingDegrees: 0
   m_coordSystem: 0
   m_streamingLodBasedOnDistance: 0
-  m_materialDirectory: WrldARMaterials
+  m_materialDirectory: WrldARMaterials/
   m_overrideLandmarkMaterial: {fileID: 0}
   m_useBuiltInCameraControls: 0
   m_terrainCollisions: 0
