@@ -174,9 +174,9 @@ namespace Wrld.AR.EditorScripts
             {
                 GameObject arAnchorObject = new GameObject ("WRLDARKitAnchorHandler");
                 var comp = System.Convert.ChangeType (arAnchorObject.AddComponent (arAnchorHandler), arAnchorHandler);
-                FieldInfo mapParentField = comp.GetType ().GetField ("WrldMapParent");
+                FieldInfo mapParentField = comp.GetType ().GetField ("wrldMapParent");
                 mapParentField.SetValue (comp, wrldARKitSetupHelper.WrldMapParent);
-                FieldInfo mapMaskField = comp.GetType ().GetField ("WrldMapMask");
+                FieldInfo mapMaskField = comp.GetType ().GetField ("wrldMapMask");
                 mapMaskField.SetValue (comp, wrldARKitSetupHelper.WrldMapMask);
             }
             else 
