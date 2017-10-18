@@ -9,22 +9,22 @@ namespace Wrld.AR.EditorScripts
     [CustomEditor(typeof(WRLDARKitSetupHelper))]
     public class ARKitSceneSetupHandler : UnityEditor.Editor
     {
-        const string packagePath = "Assets/Wrld SDK Samples/AR/ARKit/Package/ARKitDependentScripts.unitypackage";
-
+        const string PackageName = "ARKitDependentScripts";
+        const string PackagePath = "Assets/Wrld SDK Samples/AR/ARKit/Package/" + PackageName + ".unitypackage";
 
         private static bool m_editorEventsSubscribed = false;
-        private const string WaitingForScriptCompilationKey = "WaitingForScriptCompilationKey";
 
         static ARKitSceneSetupHandler()
         {
             if (!m_editorEventsSubscribed) 
             {
-                EditorSceneManager.sceneOpened += EditorSceneOpened;
+                EditorSceneManager.sceneOpened += OnEditorSceneOpened;
+                AssetDatabase.importPackageCompleted += OnPackageImportCompleted;
                 m_editorEventsSubscribed = true;
             }
         }
 
-        static void EditorSceneOpened (UnityEngine.SceneManagement.Scene scene, OpenSceneMode mode)
+        static void OnEditorSceneOpened (UnityEngine.SceneManagement.Scene scene, OpenSceneMode mode)
         {
             CheckSceneStatus ();
         }
@@ -39,12 +39,12 @@ namespace Wrld.AR.EditorScripts
             }
         }
 
-        [UnityEditor.Callbacks.DidReloadScripts]
-        private static void OnScriptsCompiled() 
+        private static void OnPackageImportCompleted(string packageName) 
         {
-            if (EditorPrefs.GetBool(WaitingForScriptCompilationKey, false)) 
+            WRLDARKitSetupHelper wrldARKitSetupHelper = GameObject.FindObjectOfType<WRLDARKitSetupHelper>();
+
+            if (PackageName.Equals(packageName) && wrldARKitSetupHelper != null) 
             {
-                EditorPrefs.DeleteKey (WaitingForScriptCompilationKey);
                 SetupARKitScene ();
             }
         }
@@ -53,8 +53,7 @@ namespace Wrld.AR.EditorScripts
         {
             if (GetType ("WRLDARKitAnchorHandler") == null) 
             {
-                AssetDatabase.ImportPackage (packagePath, false);
-                EditorPrefs.SetBool (WaitingForScriptCompilationKey, true);
+                AssetDatabase.ImportPackage (PackagePath, false);
             } 
             else 
             {
